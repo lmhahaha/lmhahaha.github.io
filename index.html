@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>gonita - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.17.6";</script>
+<script src="../../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package gonita
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "bitbucket.org/wisdomfish/gonita"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#ModelInputStringToRawJson">func ModelInputStringToRawJson(s string) string</a></dd>
+			
+				
+				<dd><a href="index.html#RebuildJson">func RebuildJson(jsonBody string, key ...string) string</a></dd>
+			
+				
+				<dd><a href="index.html#StringToRawJson">func StringToRawJson(s string) string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#BPMClient">type BPMClient</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#New">func New(username string) *BPMClient</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.AddGroup">func (b *BPMClient) AddGroup(bodyInput string) []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.AddMembership">func (b *BPMClient) AddMembership(bodyInput string) []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.AddProfessionalContactData">func (b *BPMClient) AddProfessionalContactData(id string, username string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.AddProfileMember">func (b *BPMClient) AddProfileMember(profile_id string, id string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.AddUser">func (b *BPMClient) AddUser(userName string, manager_id string, enabled bool) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.CreateProcessCase">func (b *BPMClient) CreateProcessCase(processId string, jsonBody ...string) (caseId []byte)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.DeleteGroup">func (b *BPMClient) DeleteGroup(groupId string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.DeleteMembership">func (b *BPMClient) DeleteMembership(userId string, groupId string, roleId string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.DeleteUser">func (b *BPMClient) DeleteUser(userId string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.EditGroup">func (b *BPMClient) EditGroup(bodyInput string, groupId string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.EditUser">func (b *BPMClient) EditUser(userId string, bodyInput string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.ExecuteTask">func (b *BPMClient) ExecuteTask(taskId string, jsonBody ...string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.GetArchivedTaskDetail">func (b *BPMClient) GetArchivedTaskDetail(sourceObjectId string) []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.GetCaseArchivedTaskDetail">func (b *BPMClient) GetCaseArchivedTaskDetail(caseId string) []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.GetCasePendingTaskDetail">func (b *BPMClient) GetCasePendingTaskDetail(caseId string) []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.GetLoginToken">func (b *BPMClient) GetLoginToken()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.GetProcessAllCaseList">func (b *BPMClient) GetProcessAllCaseList(rows string, processId string) []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BPMClient.GetStateCaseList">func (b *BPMClient) GetStateCaseList(rows string, state string, userId string) []byte</a></dd>
+				
+			
+				
+				<dd><a href="index.html#FormInput">type FormInput</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/bpm.go">bpm.go</a>
+			
+				<a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go">identity.go</a>
+			
+				<a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/init.go">init.go</a>
+			
+				<a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/new.go">new.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span id="URI_BPM">URI_BPM</span> = &#34;API/&#34;
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="ModelInputStringToRawJson">func <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/bpm.go?s=2005:2052#L56">ModelInputStringToRawJson</a>
+				<a class="permalink" href="index.html#ModelInputStringToRawJson">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ModelInputStringToRawJson(s <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="RebuildJson">func <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go?s=6846:6901#L235">RebuildJson</a>
+				<a class="permalink" href="index.html#RebuildJson">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func RebuildJson(jsonBody <a href="http://localhost:6060/pkg/builtin/#string">string</a>, key ...<a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="StringToRawJson">func <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go?s=7246:7283#L254">StringToRawJson</a>
+				<a class="permalink" href="index.html#StringToRawJson">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func StringToRawJson(s <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="BPMClient">type <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/init.go?s=470:650#L18">BPMClient</a>
+				<a class="permalink" href="index.html#BPMClient">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type BPMClient struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/new.go?s=192:228#L6">New</a>
+					<a class="permalink" href="index.html#New">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func New(username <a href="http://localhost:6060/pkg/builtin/#string">string</a>) *<a href="index.html#BPMClient">BPMClient</a></pre>
+				<p>
+New
+</p>
+<pre>@Description: 傳入 username 創建該人員Client端請求實例.
+@param username
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="BPMClient.AddGroup">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go?s=170:223#L4">AddGroup</a>
+					<a class="permalink" href="index.html#BPMClient.AddGroup">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) AddGroup(bodyInput <a href="http://localhost:6060/pkg/builtin/#string">string</a>) []<a href="http://localhost:6060/pkg/builtin/#byte">byte</a></pre>
+				<p>
+AddGroup
+</p>
+<pre>@Description: 新增部門
+@receiver b
+@param bodyInput
+@return []byte
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.AddMembership">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go?s=3904:3962#L126">AddMembership</a>
+					<a class="permalink" href="index.html#BPMClient.AddMembership">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) AddMembership(bodyInput <a href="http://localhost:6060/pkg/builtin/#string">string</a>) []<a href="http://localhost:6060/pkg/builtin/#byte">byte</a></pre>
+				<p>
+AddMembership
+</p>
+<pre>@Description: 設定人員隸屬部門
+@receiver b
+@param bodyInput
+@return []byte
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.AddProfessionalContactData">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go?s=4524:4602#L150">AddProfessionalContactData</a>
+					<a class="permalink" href="index.html#BPMClient.AddProfessionalContactData">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) AddProfessionalContactData(id <a href="http://localhost:6060/pkg/builtin/#string">string</a>, username <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+AddProfessionalContactData
+</p>
+<pre>@Description: 新增人員聯繫資訊
+@receiver b
+@param id
+@param username
+@return int
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.AddProfileMember">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go?s=3162:3232#L103">AddProfileMember</a>
+					<a class="permalink" href="index.html#BPMClient.AddProfileMember">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) AddProfileMember(profile_id <a href="http://localhost:6060/pkg/builtin/#string">string</a>, id <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+AddProfileMember
+</p>
+<pre>@Description: 設定為後台管理員或使用者
+@receiver b
+@param profile_id
+@param id
+@return int
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.AddUser">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go?s=1856:1938#L64">AddUser</a>
+					<a class="permalink" href="index.html#BPMClient.AddUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) AddUser(userName <a href="http://localhost:6060/pkg/builtin/#string">string</a>, manager_id <a href="http://localhost:6060/pkg/builtin/#string">string</a>, enabled <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>) <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				<p>
+AddUser
+</p>
+<pre>@Description: 新增人員
+@receiver b
+@param userName
+@param manager_id
+@param enabled
+@return bool
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.CreateProcessCase">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/bpm.go?s=456:547#L8">CreateProcessCase</a>
+					<a class="permalink" href="index.html#BPMClient.CreateProcessCase">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) CreateProcessCase(processId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, jsonBody ...<a href="http://localhost:6060/pkg/builtin/#string">string</a>) (caseId []<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>)</pre>
+				<p>
+Create a new caseID(process instance)
+ref: <a href="https://documentation.bonitasoft.com/bonita/2021.2/api/bpm-api#start-a-process-using-an-instantiation-contract">https://documentation.bonitasoft.com/bonita/2021.2/api/bpm-api#start-a-process-using-an-instantiation-contract</a>
+</p>
+<pre>CreateProcessCase
+@Description: Create a new caseID(process instance), Start a new form
+@receiver b
+@param processId [表單ID]
+@param jsonBody 只需要提供&#34;內層&#34;結構(轉成string)
+@return caseId
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.DeleteGroup">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go?s=1334:1385#L44">DeleteGroup</a>
+					<a class="permalink" href="index.html#BPMClient.DeleteGroup">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) DeleteGroup(groupId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+DeleteGroup
+</p>
+<pre>@Description: 刪除部門
+@receiver b
+@param groupId
+@return int (200為成功)
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.DeleteMembership">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go?s=5899:5985#L200">DeleteMembership</a>
+					<a class="permalink" href="index.html#BPMClient.DeleteMembership">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) DeleteMembership(userId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, groupId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, roleId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+DeleteMembership
+</p>
+<pre>@Description: 刪除人員隸屬部門
+@receiver b
+@param userId
+@param groupId
+@param roleId
+@return int
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.DeleteUser">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go?s=6468:6517#L220">DeleteUser</a>
+					<a class="permalink" href="index.html#BPMClient.DeleteUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) DeleteUser(userId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+DeleteUser
+</p>
+<pre>@Description: 刪除人員
+@receiver b
+@param userId
+@return int
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.EditGroup">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go?s=727:794#L24">EditGroup</a>
+					<a class="permalink" href="index.html#BPMClient.EditGroup">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) EditGroup(bodyInput <a href="http://localhost:6060/pkg/builtin/#string">string</a>, groupId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+EditGroup
+</p>
+<pre>@Description: 更新部門
+@receiver b
+@param bodyInput
+@param groupId
+@return int (200為成功)
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.EditUser">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/identity.go?s=5270:5335#L175">EditUser</a>
+					<a class="permalink" href="index.html#BPMClient.EditUser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) EditUser(userId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, bodyInput <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+EditUser
+</p>
+<pre>@Description: 編輯人員
+@receiver b
+@param userId
+@param bodyInput
+@return int
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.ExecuteTask">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/bpm.go?s=3266:3336#L107">ExecuteTask</a>
+					<a class="permalink" href="index.html#BPMClient.ExecuteTask">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) ExecuteTask(taskId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, jsonBody ...<a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				<p>
+ExecuteTask
+</p>
+<pre>@Description:審核任務
+@receiver b
+@param taskId
+@param jsonBody 只需要提供&#34;內層&#34;結構(轉成string)
+@return ResponseStatusCode (204為成功)
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.GetArchivedTaskDetail">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/bpm.go?s=5153:5224#L173">GetArchivedTaskDetail</a>
+					<a class="permalink" href="index.html#BPMClient.GetArchivedTaskDetail">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) GetArchivedTaskDetail(sourceObjectId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) []<a href="http://localhost:6060/pkg/builtin/#byte">byte</a></pre>
+				<p>
+GetCaseArchivedTaskDetail
+</p>
+<pre>@Description: 顯示該任務完成後之詳細資料
+@receiver b
+@parm sourceObjectId
+@return []byte
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.GetCaseArchivedTaskDetail">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/bpm.go?s=4581:4648#L155">GetCaseArchivedTaskDetail</a>
+					<a class="permalink" href="index.html#BPMClient.GetCaseArchivedTaskDetail">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) GetCaseArchivedTaskDetail(caseId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) []<a href="http://localhost:6060/pkg/builtin/#byte">byte</a></pre>
+				<p>
+GetCaseArchivedTaskDetail
+</p>
+<pre>@Description: 顯示該單已完成任務詳細資料
+@receiver b
+@parm caseId
+@return []byte
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.GetCasePendingTaskDetail">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/bpm.go?s=4024:4090#L137">GetCasePendingTaskDetail</a>
+					<a class="permalink" href="index.html#BPMClient.GetCasePendingTaskDetail">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) GetCasePendingTaskDetail(caseId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) []<a href="http://localhost:6060/pkg/builtin/#byte">byte</a></pre>
+				<p>
+GetStateCaseList
+</p>
+<pre>@Description: 顯示該單待執行任務詳細資料
+@receiver b
+@param caseId
+@return []byte
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.GetLoginToken">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/new.go?s=776:811#L29">GetLoginToken</a>
+					<a class="permalink" href="index.html#BPMClient.GetLoginToken">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) GetLoginToken()</pre>
+				<p>
+GetLoginToken
+</p>
+<pre>@Description: Login, /bonita/loginservice
+@receiver b
+</pre>
+<p>
+<a href="https://documentation.bonitasoft.com/bonita/2021.2/api/rest-api-authentication">https://documentation.bonitasoft.com/bonita/2021.2/api/rest-api-authentication</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.GetProcessAllCaseList">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/bpm.go?s=5731:5810#L192">GetProcessAllCaseList</a>
+					<a class="permalink" href="index.html#BPMClient.GetProcessAllCaseList">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) GetProcessAllCaseList(rows <a href="http://localhost:6060/pkg/builtin/#string">string</a>, processId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) []<a href="http://localhost:6060/pkg/builtin/#byte">byte</a></pre>
+				<p>
+GetProcessAllCaseList
+</p>
+<pre>@Description: 取得該流程所有單況
+@receiver b
+@param rows
+@param caseId
+@return []byte
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="BPMClient.GetStateCaseList">func (*BPMClient) <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/bpm.go?s=2554:2639#L85">GetStateCaseList</a>
+					<a class="permalink" href="index.html#BPMClient.GetStateCaseList">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="index.html#BPMClient">BPMClient</a>) GetStateCaseList(rows <a href="http://localhost:6060/pkg/builtin/#string">string</a>, state <a href="http://localhost:6060/pkg/builtin/#string">string</a>, userId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) []<a href="http://localhost:6060/pkg/builtin/#byte">byte</a></pre>
+				<p>
+GetStateCaseList
+</p>
+<pre>@Description: 按簽核狀態取回人員有關的表單
+@receiver b
+@param rows 顯示資料量
+@param state  |ready|
+@param userId
+@return []byte
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="FormInput">type <a href="http://localhost:6060/src/bitbucket.org/wisdomfish/gonita/init.go?s=388:468#L14">FormInput</a>
+				<a class="permalink" href="index.html#FormInput">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+FormInput
+@Description: CRUD必要的 JSON 外層結構
+</p>
+
+			<pre>type FormInput struct {
+<span id="FormInput.ModelInput"></span>    ModelInput *interface{} `json:&#34;modelInput,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="http://localhost:6060/pkg/bitbucket.org/wisdomfish/">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="bpm/index.html">bpm</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						
+					</td>
+				</tr>
+			
+		</table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.6.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>
